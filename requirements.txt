@@ -1,0 +1,37 @@
+# Data Processing
+pandas
+numpy
+
+# Machine Learning
+scikit-learn
+scipy
+joblib
+xgboost
+
+# Data Visualization
+matplotlib
+plotly
+seaborn
+
+# Dashboard
+streamlit
+
+# Database
+SQLAlchemy
+PyMySQL
+
+# Environment Variables
+python-dotenv
+
+# Excel Support
+openpyxl
+
+# Logging & Progress
+tqdm
+
+# Explainable AI (Phase 2)
+shap
+
+# Model Serialization
+cloudpickle
+reportlab
