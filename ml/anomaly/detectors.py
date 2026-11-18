@@ -34,8 +34,10 @@ class AnomalyDetector:
         }
         results, predictions, curves = [], {}, {}
         for name, model in models.items():
-            model.fit(X)
-            predicted = (model.predict(X) == -1).astype(int)
+            fit_input = X.to_numpy() if name == "Local Outlier Factor" else X
+            model.fit(fit_input)
+            prediction_input = X.to_numpy() if name == "Local Outlier Factor" else X
+            predicted = (model.predict(prediction_input) == -1).astype(int)
             predictions[name] = predicted
             row = {"model": name, "accuracy": None, "precision": None, "recall": None, "f1": None, "roc_auc": None, "confusion_matrix": None}
             if y is not None:
